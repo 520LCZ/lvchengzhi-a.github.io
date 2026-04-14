@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #3498db;
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        section {
+            background-color: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #3498db;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-image {
+            flex: 0 0 200px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .project-card {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .project-card p {
+            margin-bottom: 15px;
+        }
+        
+        .project-card a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        
+        .project-card a:hover {
+            background-color: #2980b9;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .contact-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .contact-item h3 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+        }
+        
+        .contact-item a:hover {
+            color: #3498db;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 20px;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+            
+            section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>欢迎来到我的个人主页</h1>
+            <p>记录学习、分享知识、展示成果</p>
+        </header>
+        
+        <section id="about">
+            <h2>关于我</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>您好！我是一名热爱技术的开发者，专注于前端开发和Web技术。我喜欢学习新的技术栈，并且乐于分享我的学习心得和项目经验。</p>
+                    <p>在这个个人主页上，您可以了解我的技术背景、查看我的项目作品，以及获取我的联系方式。</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=professional%20developer%20profile%20photo%2C%20clean%20background%2C%20friendly%20smile&image_size=square" alt="个人照片">
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2>我的项目</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>项目一</h3>
+                    <p>这是一个基于HTML、CSS和JavaScript的前端项目，展示了响应式设计和交互效果。</p>
+                    <a href="#">查看详情</a>
+                </div>
+                <div class="project-card">
+                    <h3>项目二</h3>
+                    <p>这是一个使用现代前端框架开发的应用，具有良好的用户体验和性能优化。</p>
+                    <a href="#">查看详情</a>
+                </div>
+                <div class="project-card">
+                    <h3>项目三</h3>
+                    <p>这是一个后端项目，使用Node.js和数据库技术，提供API服务和数据处理功能。</p>
+                    <a href="#">查看详情</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>联系方式</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/520LCZ" target="_blank">github.com/520LCZ</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>邮箱</h3>
+                    <p><a href="mailto:example@example.com">example@example.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h3>社交媒体</h3>
+                    <p><a href="#">微博</a> | <a href="#">知乎</a></p>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>&copy; 2026 个人主页. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
